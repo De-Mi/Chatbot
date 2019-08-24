@@ -1,37 +1,135 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>Demilade Agbonyin</title>
 
-	<title>chatbot1</title>
-	<script type="text/javascript" src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
-	<script
-	  src="https://code.jquery.com/jquery-3.2.1.min.js"
-	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-	<script type="text/javascript" src="sketch.js"></script>
-</head>
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+      	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+      	<meta name="viewport" content="width=device-width, initial-scale=1">
+      	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<meta charset="utf-8">
+  		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  		<meta name="robots" content="noindex, nofollow" />
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  		<link rel="stylesheet" href="pages.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<body>
+        <style>
+        	body{
+        		background-color: black;
+        		color: white;
+        		
+        		
+        	}
+        	body p{float:left;padding-top: 80px;}
+        	p{
+        		font-size: 100px;
+        		font-family: 'Barlow', sans-serif;
+        		opacity: 0.5;
+        	}
+        	#share{
+    				float:right;
+    				color: white;
+    				padding: 50px;
+    				cursor:pointer;
+    			}
+        </style>
+	</head>
 
-	<h1>Chatbot</h1>
+	<body>
+		<div class="container">
+		<i id = 'share' class="material-icons md-48">share</i>
 
-	<p>
-		say: <input id="user_input" />
-		<button id="submit">submit</button>
-	</p>
+		<!-- MODAL HEADER -->
+		
+		<div id="myModal" class="modal" >
 
-	<p>
-		reply: <span id="output"></span>
-	</p>
+  			<!-- Modal content -->
+  			<div class="modal-content">
+    			<div class="modal-header">
+    				<!-- <h5>Share</h5> -->
+      				<span class="close">&times;</span>
+      				
+   				 </div>
+    			<div class="modal-body">
+     				<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter">  </a>
+					<a href="#" class="fa fa-linkedin">  </a>
+					<a href="#" class="fa fa-youtube">  </a>
+					<a href="#" class="fa fa-instagram">  </a>
+					<a href="#" class="fa fa-yahoo">  </a>
+            		<a href="#" class="fa fa-reddit"></a>
+            		<a href="#" class="fa fa-tumblr"></a>
+            		<a href="#" class="fa fa-snapchat-ghost"></a>
+            		<a href="#" class="fa fa-google"></a>
+            		<a href="#" class="fa fa-vine"></a>
+					<a href="#" class="fa fa-skype"></a>
+    			</div>
+    			<div class="modal-footer">
+      				<h5>Share</h5>
+   			 	</div>
+  			</div>
 
+		</div>
+		<div>
+		<p>Demilade Agbonyin<br>
+		Critical thinker&<br>
+		Team player&<br>
+		<span style = 'color: red'>C</span><span style = 'color: orange'>r</span style = 'color: yellow'><span style = 'color: green'>e</span><span style = 'color: blue'>a</span><span style = 'color: violet'>t</span><span style = 'color: indigo'>i</span><span style = 'color: red'>v</span><span style = 'color: orange'>e</span>
 
-</body>
+		&<br>Well organized
+		</p>
+		
+		
+		
+		
+		<button class="button"><span>Get Started</span></button>
+	</div>
+</div>
+		
+
+			<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("share");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+  				modal.style.display = "block";
+  				document.body.style.overflow = "hidden"; // ADD THIS LINE
+    			document.body.style.height = "100%"; // ADD THIS LINE
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+ 	 			modal.style.display = "none";
+ 	 			document.body.style.overflow = "auto"; // ADD THIS LINE
+    			document.body.style.height = "auto"; // ADD THIS LINE
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+  				if (event.target == modal) {
+   					modal.style.display = "none";
+   					document.body.style.overflow = "auto"; // ADD THIS LINE
+    				document.body.style.height = "auto";  // ADD THIS LINE
+  				}
+			}
+		</script>
+	
+	</body>
 
 </html>
